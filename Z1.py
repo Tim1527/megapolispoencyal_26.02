@@ -6,6 +6,14 @@ headers = f.pop(0)
 main_list = [string.split(";") for string in f]
 
 def data_counter(day,month,year):
+    """Функция data_counter считает количество дней
+    в двух датах и возвращает их разность в днях
+    day - порядкорвый номер дня
+    month - порядкорвый номер месяца
+    year - порядкорвый номер года
+
+    """
+
     dat_1 = 12+31+28+31+30+31
     for i in range(1,2023):
         if i%4 == 0:
@@ -77,4 +85,3 @@ f = open("songs_new.csv","w")
 f.write(headers+"\n")
 for track in data_streams_sorted_list:
     f.write(";".join(track)+"\n")
-
